@@ -5,11 +5,14 @@ const checed = (event) => {
   event.preventDefault();
   if (event.currentTarget.value.length == minimumNumberOfCharacters) {
     focusOnInput.classList.add("valid");
+    focusOnInput.classList.remove("invalid");
   }
   if (event.currentTarget.value.length != minimumNumberOfCharacters) {
     focusOnInput.classList.add("invalid");
+    focusOnInput.classList.remove("valid");
   }
 };
+
 focusOnInput.addEventListener("blur", checed);
 
 /* Напиши скрипт, который при потере фокуса на инпуте(событие blur),
