@@ -1,13 +1,13 @@
 const focusOnInput = document.querySelector("#validation-input");
-const minimumNumberOfCharacters = focusOnInput.dataset.length;
+const minimumNumberOfCharacters = Number(focusOnInput.dataset.length);
 
 const checed = (event) => {
   event.preventDefault();
-  if (event.currentTarget.value.length == minimumNumberOfCharacters) {
+  if (event.currentTarget.value.length === minimumNumberOfCharacters) {
     focusOnInput.classList.add("valid");
     focusOnInput.classList.remove("invalid");
   }
-  if (event.currentTarget.value.length != minimumNumberOfCharacters) {
+  if (event.currentTarget.value.length !== minimumNumberOfCharacters) {
     focusOnInput.classList.add("invalid");
     focusOnInput.classList.remove("valid");
   }

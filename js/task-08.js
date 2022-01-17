@@ -24,10 +24,10 @@ function oneFormSubmit(event) {
   const email = formeElements.email.value;
   const password = formeElements.password.value;
 
-  if (formeElements.email.value == "" || formeElements.password.value == "") {
+  if (formeElements.email.value === "" || formeElements.password.value === "") {
     alert("Please fill in all the fields!");
   }
-  if (formeElements.email.value != "" || formeElements.password.value != "") {
+  if (formeElements.email.value !== "" || formeElements.password.value !== "") {
     const formData = {
       email,
       password,
